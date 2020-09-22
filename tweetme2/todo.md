@@ -9,14 +9,15 @@
         -> User's feed only
         -> User + who they follow
     
-2. Twwets
+2. Tweets
     -> Creating
         -> Text
-        -> Image
-
+        -> Image -> Medai Storage Server
     -> Delete
     -> Retweeting
-    -> Liking 
+        -> Read only serializer
+        -> Create only serializer 
+    -> Liking or Unliking  
 
 3. Following/Followers
 
