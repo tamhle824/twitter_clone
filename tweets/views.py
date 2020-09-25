@@ -90,6 +90,7 @@ def tweet_action_view(request, *args, **kwargs):
                 content=content,
             )
             serializer = TweetSerializer(new_tweet)
+            print(Response)
             return Response(serializer.data, status=201) 
     return Response({}, status=200)
 

@@ -117,7 +117,7 @@ tweetCreateFormEl.addEventListener("submit",handelTweetFormDidSubmit )
 
 const tweetsContainerElement = document.getElementById("tweets") 
 
-const loadTweets = function (tweetsElement) {
+function loadTweets (tweetsElement) {
     const xhr = new XMLHttpRequest()
     const method = 'GET'
     const url = "/tweets"
@@ -145,7 +145,7 @@ loadTweets(tweetsContainerElement)
 
 function handleTweetActionBtn (tweet_id, currentCount, action) {
     console.log(tweet_id, currentCount)
-    const url = "/api/tweets/action"
+    const url = "/api/tweets/action/"
     const method="POST"
     const data = JSON.stringify({ 
         id: tweet_id,
@@ -182,7 +182,6 @@ function UnLikeBtn(tweet){
 function LikeBtn(tweet){
     return "<button class='btn btn-primary btn-sm' onclick=handleTweetActionBtn(" + 
     tweet.id + ","+ tweet.likes + ",'like')>"+tweet.likes + "Likes</button>"
-
 }
 
 
